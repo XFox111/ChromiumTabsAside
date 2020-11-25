@@ -334,3 +334,22 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) =>
 	if (changeInfo.status === "complete")
 		AppendThumbnail(tabId, tab)
 });
+
+function ExportData()
+{
+	let element = document.createElement("a");
+	element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(JSON.stringify(collections)));
+	element.setAttribute("download", "TabsAsideData.json");
+
+	element.style.display = "none";
+	document.body.appendChild(element);
+
+	element.click();
+
+	document.body.removeChild(element);
+}
+
+function ImportData()
+{
+	// TODO: Upload and integrate data
+}

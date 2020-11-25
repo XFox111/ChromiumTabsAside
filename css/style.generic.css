@@ -46,6 +46,7 @@
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
+	outline: none !important;
 }
 	.tabsAside button:hover
 	{
@@ -96,7 +97,7 @@
 		font-size: 12px;
 
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: auto 1fr auto;
 		grid-column-gap: 14px;
 	}
 
@@ -105,10 +106,17 @@
 			background-color: #eeee;
 		}
 
-		.tabsAside nav button img
+		.tabsAside nav button img:first-child
 		{
 			width: 16px;
 			height: 16px;
+		}
+
+		.tabsAside nav button img:last-child
+		{
+			width: 12px;
+			height: 12px;
+			align-self: center;
 		}
 
 	.tabsAside button + nav:active,

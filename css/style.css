@@ -25,6 +25,7 @@
 {
 	user-select: none;
 	position: fixed;
+	overflow: visible !important;
 
 	right: 0px;
 	top: 0px;
@@ -80,6 +81,23 @@
 				top: 45px;
 				right: 55px;
 			}
+
+			.tabsAside.pane > header > nav nav
+			{
+				top: 115px;
+				right: 385px;
+				width: 185px;
+				opacity: 0;
+				transition-delay: 1s;
+				transition: .25s;
+			}
+
+				.tabsAside.pane > header > nav nav:hover,
+				.tabsAside.pane > header > nav button:hover + nav
+				{
+					visibility: visible;
+					opacity: 1;
+				}
 
 				.tabsAside.pane > header nav > p
 				{
